@@ -11,6 +11,7 @@ import java.util.Map;
  * @version SoSe 2019
  *
  *Fetch(00:003,15.04.2020)
+ *Push (00:14,15.04.2020)
  */
 class VerleihServiceImpl extends AbstractObservableService
         implements VerleihService
