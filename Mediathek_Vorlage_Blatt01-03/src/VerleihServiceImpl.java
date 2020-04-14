@@ -9,6 +9,8 @@ import java.util.Map;
  * 
  * @author SE2-Team
  * @version SoSe 2019
+ *
+ *Fetch(00:003,15.04.2020)
  */
 class VerleihServiceImpl extends AbstractObservableService
         implements VerleihService
