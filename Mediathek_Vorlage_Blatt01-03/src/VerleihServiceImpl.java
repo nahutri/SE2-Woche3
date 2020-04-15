@@ -140,13 +140,22 @@ class VerleihServiceImpl extends AbstractObservableService
         assert sindAlleNichtVerliehen(medien) : "Vorbedingung verletzt";
         assert ausleihDatum != null : "Vorbedingung verletzt: null";
 
+        System.out.println("VerleiheAn von VSImpl");
+
         for (Medium medium : medien)
         {
             Verleihkarte karte = new Verleihkarte(kunde, medium, ausleihDatum);
 
+            _verleihkarten.put(karte.getMedium(), karte);//2.3.2
+
+            /*System.out.println(karte.getEntleiher());
+            System.out.println(karte.getMedium());
+            System.out.println(karte.getAusleihdatum());*/
+
         }
 
         informiereUeberAenderung();
+
     }
 
     @Override

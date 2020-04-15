@@ -173,16 +173,17 @@ class DummyVerleihService extends AbstractObservableService
         if (kundeImBestand(kunde)) System.out.println("Kunde im Bestand");
         if (ausleihDatum != null) System.out.println("Datum vorhanden");*/
 
-        if (sindAlleNichtVerliehen(medien) && kundeImBestand(kunde)
+        /*     if (sindAlleNichtVerliehen(medien) && kundeImBestand(kunde)
                 && ausleihDatum != null)
         {
             NEUKARTE = new Verleihkarte(kunde, MEDIUM, ausleihDatum);
-
+        
         }
         else
         {
             System.out.println("Fehler beim Protokollieren!");
-        }
+        }*/
+
     }
 
     @Override
