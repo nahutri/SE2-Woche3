@@ -168,6 +168,11 @@ class DummyVerleihService extends AbstractObservableService
      */
     public void verleiheAn(Kunde kunde, List<Medium> medien, Datum ausleihDatum)
     {
+        /*        if (sindAlleNichtVerliehen(medien))
+            System.out.println("Medien wurde nicht ausgeliehen ");
+        if (kundeImBestand(kunde)) System.out.println("Kunde im Bestand");
+        if (ausleihDatum != null) System.out.println("Datum vorhanden");*/
+
         if (sindAlleNichtVerliehen(medien) && kundeImBestand(kunde)
                 && ausleihDatum != null)
         {
