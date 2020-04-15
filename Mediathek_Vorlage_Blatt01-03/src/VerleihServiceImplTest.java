@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ public class VerleihServiceImplTest
     private Medium _abbey;
     private Medium _bad;
     private Medium _shape;
+    private List<Medium> _medien;
+
     private MedienbestandService _medienbestand;
 
     private VerleihServiceImpl _verleihService;
@@ -63,18 +66,39 @@ public class VerleihServiceImplTest
     }
 
     @Test
+    /**
+     * _verleihService hat Kunden, deshalb schlägt der Test fail
+     */
     public void testNochEinTestFall1()
     {
+        assertTrue(_verleihService.kundeImBestand(null));
+
     }
 
     @Test
+    /**
+     * Simuliert den Ausleih einer Person,dann _abbey ist verliehen,
+     *  weil es in der _medien liste ist
+     *  
+     *  Test zeigt: verleiheAn ist kaputt
+     */
     public void testNochEinTestFall2()
     {
+        _verleihService.verleiheAn(_brian, _medien, Datum.heute());
+        assertTrue(_verleihService.istVerliehen(_abbey));
+
     }
 
     @Test
+    /**
+     * Prüft ob die Verleihkarte funktioniert.
+     * Antwort: funktioniert
+     */
     public void testNochEinTestFall3()
     {
+        Verleihkarte _neueKarte = new Verleihkarte(_brian, _abbey,
+                Datum.heute());
+        assertSame(_neueKarte.getEntleiher(), _brian);
     }
 
     private void setUpKunden()
