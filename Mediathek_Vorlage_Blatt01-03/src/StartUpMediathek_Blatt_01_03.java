@@ -27,6 +27,7 @@ class StartUpMediathek_Blatt_01_03
     {
 
         System.out.println("mit SE2Format (1.1.4)");
+        System.out.println("Woche 3");
         pruefeObAssertionsAktiviert();
         erstelleServices();
 
