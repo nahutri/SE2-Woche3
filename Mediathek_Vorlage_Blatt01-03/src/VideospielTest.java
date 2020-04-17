@@ -4,6 +4,8 @@ import org.junit.Test;
 
 public class VideospielTest
 {
+    private static final String SYSTEM = "System";
+
     private static final String KOMMENTAR = "Kommentar";
 
     private static final String TITEL = "Titel";
@@ -21,8 +23,8 @@ public class VideospielTest
 
     public VideospielTest()
     {
-        Gui = new Videospiel("Das GUi-Spiel", "Graphical Interface");
-        _standard = new Videospiel(TITEL, KOMMENTAR);
+        Gui = new Videospiel("Das GUi-Spiel", "Graphical Interface", "PC");
+        _standard = new Videospiel(TITEL, KOMMENTAR, SYSTEM);
 
     }
 
@@ -49,6 +51,16 @@ public class VideospielTest
 
         assertEquals(Gui.getTitel(), "Das GUi-Spiel");
         assertEquals(_standard.getTitel(), TITEL);
+    }
+
+    @Test
+    public void testGetSystem()
+    {
+        Gui.getSystem();
+        _standard.getSystem();
+
+        assertEquals(Gui.getSystem(), "PC");
+        assertEquals(_standard.getSystem(), SYSTEM);
     }
 
     @Test
