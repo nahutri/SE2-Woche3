@@ -24,6 +24,14 @@ public class Videospiel implements Medium
      * @param titel
      * @param kommentar
      * @param system
+     * 
+     * @require titel !=null
+     * @require kommentar != null
+     * @require system != null
+     * 
+     * @ensure getKommentar = kommentar
+     * @ensure getSystem = system
+     * @ensure getTitel = titel
      */
     public Videospiel(String titel, String kommentar, String system)
     {
@@ -53,11 +61,12 @@ public class Videospiel implements Medium
     }
 
     /**
-     * 
+     * Setzt den Titel
      * @param titel
      */
     public void setTitel(String titel)
     {
+        assert titel != null : "Vorbedingung verletzt: null";
         _titel = titel;
     }
 
@@ -76,12 +85,15 @@ public class Videospiel implements Medium
      */
     public void setKommentar(String kommentar)
     {
+        assert kommentar != null : "Vorbedingung verletzt: null";
+
         _kommentar = kommentar;
     }
 
     /**
      * Getter für System
      * @return das System des Videosspiels
+     * @ensure _system !=0
      */
     public String getSystem()
     {
@@ -94,6 +106,7 @@ public class Videospiel implements Medium
      */
     public void setSystem(String system)
     {
+        assert system != null : "Vorbedingung verletzt: null";
 
         //this._system = _system; //Vorschlag von Eclipse
 
