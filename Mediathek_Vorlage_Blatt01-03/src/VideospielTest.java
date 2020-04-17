@@ -4,6 +4,9 @@ import org.junit.Test;
 
 public class VideospielTest
 {
+    private static final String KOMMENTAR = "Kommentar";
+
+    private static final String TITEL = "Titel";
     /*    private Videospiel _videospiel1;
     
         @Before
@@ -14,10 +17,12 @@ public class VideospielTest
     }*/
 
     private Videospiel Gui;
+    private Videospiel _standard;
 
     public VideospielTest()
     {
         Gui = new Videospiel("Das GUi-Spiel", "Graphical Interface");
+        _standard = new Videospiel(TITEL, KOMMENTAR);
 
     }
 
@@ -26,6 +31,7 @@ public class VideospielTest
     {
 
         assertEquals(Gui.getMedienBezeichnung(), "Videospiel");
+        assertEquals(_standard.getMedienBezeichnung(), "Videospiel");
 
     }
 
@@ -34,6 +40,7 @@ public class VideospielTest
     {
 
         assertEquals(Gui.getKommentar(), "Graphical Interface");
+        assertEquals(_standard.getKommentar(), KOMMENTAR);
     }
 
     @Test
@@ -41,6 +48,14 @@ public class VideospielTest
     {
 
         assertEquals(Gui.getTitel(), "Das GUi-Spiel");
+        assertEquals(_standard.getTitel(), TITEL);
+    }
+
+    @Test
+    public void testKonstruktor()
+    {
+        assertEquals(TITEL, _standard.getTitel());
+        assertEquals(KOMMENTAR, _standard.getKommentar());
     }
 
 }
