@@ -70,4 +70,17 @@ public class VideospielTest
         assertEquals(KOMMENTAR, _standard.getKommentar());
     }
 
+    @Test
+    public void testSetter()
+    {
+        Gui.setTitel("Titel Gui");
+        assertEquals(Gui.getTitel(), "Titel Gui");
+
+        _standard.setKommentar("hier");
+        assertEquals(_standard.getKommentar(), "hier");
+
+        _standard.setSystem("PC");
+        assertEquals(_standard.getSystem(), "PC");
+    }
+
 }
