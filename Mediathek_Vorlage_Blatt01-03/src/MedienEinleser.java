@@ -218,7 +218,7 @@ class MedienEinleser
         {
             String system = naechsterToken(tokenizer);
 
-            // medium = new Videospiel(titel, kommentar, system);
+            medium = new Videospiel(titel, kommentar, system);
         }
         return medium;
     }
