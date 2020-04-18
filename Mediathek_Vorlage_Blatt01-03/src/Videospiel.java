@@ -4,6 +4,7 @@ public class Videospiel implements Medium
     //vom MedienEinleser
     //medium = new Videospiel(titel, kommentar, system);
 
+    //push(02:09,18.04.2020)
     /**
      * Titel des Videospiels
      */
