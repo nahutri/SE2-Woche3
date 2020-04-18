@@ -1,7 +1,6 @@
 import java.util.List;
 
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 
 /**
  * Ein MedienDetailAnzeigerWerkzeug ist ein Werkzeug um die Details von Medien
@@ -29,13 +28,13 @@ class MedienDetailAnzeigerWerkzeug
      * 
      * @require (medien != null)
      */
-    public void setMedien(List<Medium> medien)
+    /*    public void setMedien(List<Medium> medien)
     {
         assert medien != null : "Vorbedingung verletzt: (medien != null)";
         JTextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
         // TODO Aufgabe 3.4.2 Die Mediendetails sollen angezeigt werden
         //selectedMedienTextArea.setText("");
-
+    
         for (Medium medium : medien)
         {
             if (medium instanceof CD)
@@ -43,22 +42,27 @@ class MedienDetailAnzeigerWerkzeug
                 medium = (CD) medium;
                 //selectedMedienTextArea.setText(medium.getMedienBezeichnung());
                 selectedMedienTextArea.setText(medium.getTitel());
-
+    
             }
             if (medium instanceof DVD)
             {
                 medium = (DVD) medium;
                 selectedMedienTextArea.setText(medium.getTitel());
-
+    
             }
             if (medium instanceof Videospiel)
             {
                 medium = (Videospiel) medium;
                 selectedMedienTextArea.setText(medium.getTitel());
-
+    
             }
-
+    
         }
+    
+    }*/
+
+    public void setMedien(List<Medium> medien)
+    {
 
     }
 

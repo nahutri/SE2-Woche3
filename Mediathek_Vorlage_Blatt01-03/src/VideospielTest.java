@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
@@ -81,6 +82,13 @@ public class VideospielTest
 
         _standard.setSystem("PC");
         assertEquals(_standard.getSystem(), "PC");
+    }
+
+    @Test
+    public void testGetFormatiertenString()
+    {
+        assertNotNull(_standard.getFormatiertenString());
+
     }
 
 }

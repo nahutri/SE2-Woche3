@@ -100,4 +100,23 @@ class CD implements Medium
         return _titel;
     }
 
+    /*    @param titel Der Titel der CD
+    * @param kommentar Ein Kommentar zu der CD
+    * @param interpret Der Interpret der CD
+    * @param spiellaenge Die Spiellaenge der CD in Minuten*/
+
+    @Override
+    /**
+     * @ensure Titel
+     * @ensure Kommentar
+     * @ensure Interpret
+     * @ensure Spiellänge
+     */
+    public String getFormatiertenString()
+    {
+
+        return getTitel() + "\n" + getKommentar() + "\n" + getInterpret() + "\n"
+                + getSpiellaenge();
+    }
+
 }

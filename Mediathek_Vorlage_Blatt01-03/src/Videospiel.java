@@ -115,4 +115,14 @@ public class Videospiel implements Medium
         _system = system;
     }
 
+    /**
+     * @ensure getTitel() ==titel
+     * @ensure getKommentar == kommentar
+     * @ensure getSystem == system
+     */
+    public String getFormatiertenString()
+    {
+        return getTitel() + "\n" + getKommentar() + "\n" + getSystem();
+    }
+
 }

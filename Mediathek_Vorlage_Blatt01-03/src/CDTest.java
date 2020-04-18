@@ -1,5 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -52,6 +53,12 @@ public class CDTest
     private CD getMedium()
     {
         return new CD(TITEL, KOMMENTAR, INTERPRET, LAENGE);
+    }
+
+    public void testGetFormatiertenString()
+    {
+
+        assertNotNull(_cd1.getFormatiertenString());
     }
 
 }
