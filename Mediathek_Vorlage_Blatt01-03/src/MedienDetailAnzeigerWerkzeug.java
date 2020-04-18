@@ -28,7 +28,7 @@ class MedienDetailAnzeigerWerkzeug
      * 
      * @require (medien != null)
      */
-    /*    public void setMedien(List<Medium> medien)
+    /*        public void setMedien(List<Medium> medien)
     {
         assert medien != null : "Vorbedingung verletzt: (medien != null)";
         JTextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
@@ -61,9 +61,19 @@ class MedienDetailAnzeigerWerkzeug
     
     }*/
 
-    public void setMedien(List<Medium> medien)
+        public void setMedien(List<Medium> medien)
     {
-
+        assert medien != null : "Vorbedingung verletzt: null";
+        
+        JTextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
+        
+        
+        for(Medium medium: medien) 
+        {
+            selectedMedienTextArea.setText(medium.getFormatiertenString());
+        }
+        
+    
     }
 
     /**
