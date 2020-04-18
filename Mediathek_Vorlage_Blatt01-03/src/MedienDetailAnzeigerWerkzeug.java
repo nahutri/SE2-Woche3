@@ -1,6 +1,7 @@
 import java.util.List;
 
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 /**
  * Ein MedienDetailAnzeigerWerkzeug ist ein Werkzeug um die Details von Medien
@@ -61,19 +62,17 @@ class MedienDetailAnzeigerWerkzeug
     
     }*/
 
-        public void setMedien(List<Medium> medien)
+    public void setMedien(List<Medium> medien)
     {
         assert medien != null : "Vorbedingung verletzt: null";
-        
+
         JTextArea selectedMedienTextArea = _ui.getMedienAnzeigerTextArea();
-        
-        
-        for(Medium medium: medien) 
+
+        for (Medium medium : medien)
         {
             selectedMedienTextArea.setText(medium.getFormatiertenString());
         }
-        
-    
+
     }
 
     /**
